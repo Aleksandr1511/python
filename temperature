@@ -1,0 +1,11 @@
+from pprint import pprint
+citys = {}
+with open('file1.txt') as document:
+    for city in document:
+        print('city', city)
+        temperatures = document.readline()
+        print("temp", temperatures)
+        citys[city.strip()] = temperatures.split()
+
+
+pprint(citys)
